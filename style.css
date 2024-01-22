@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(237, 240, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins';
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    margin-inline: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px #45566754,
+        -8px -8px 15px rgb(81 101 121 / 4%),
+        inset -5px -4px 13px 0px rgb(81 101 121 / 35%),
+        inset 6px 7px 12px 0px rgb(255 255 255 / 94%);
+    transition: all 0.5s;
+}
+
+.card .godBG {
+    width: 95%;
+    height: auto;
+    border-radius: 20px;
+    /* box-shadow: -3px 5px 10px 5px #4a4949; */
+    filter: drop-shadow(-5px 5px 10px#4a4949);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.card p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #ff5e00;
+    transition: all 0.5s;
+}
+
+.card .box {
+    position: relative;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    width: 280px;
+    height: 220px;
+    padding: 20px;
+    box-shadow: 7px 7px 15px #45566754,
+        -8px -8px 15px rgb(81 101 121 / 4%),
+        inset -5px -4px 13px 0px rgb(81 101 121 / 35%),
+        inset 6px 7px 12px 0px rgb(255 255 255 / 94%);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+.card:hover .godBG {
+    transform: rotateX(50deg) translateY(-80px);
+    filter: blur(5px);
+}
+
+.card:hover h3 {
+    visibility: hidden;
+}
+
+.card:hover .box {
+    opacity: 1;
+    transform: translateY(-110px) translateX(-60px);
+}
+
+.card .god {
+    position: absolute;
+    width: 250px;
+    filter: drop-shadow(0 0 10px #000);
+    margin-bottom: 120px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.card:hover .god {
+    transform: translateY(-130px);
+    opacity: 1;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title h1 {
+    font-family: 'Amita', serif;
+    color: #ff5e00;
+    font-size: 80px; 
+}
